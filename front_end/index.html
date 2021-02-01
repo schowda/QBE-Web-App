@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+
+			<meta charset="utf-8">
+			<title>Untitled Document</title>
+			<style type="text/css">
+										.uid {
+										}
+										.pid {
+										}
+										#dname {
+										}
+			</style>
+			<script src="jquery-3.4.1.min.js"></script>
+			<script src="retrieval.js"></script>
+		</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+
+<!-- LOGIN SECTION -->
+
+  <div class="container">
+
+    <h1 align= "center"> QBE </h1>
+    <label for="uname"><b>Username</b></label>
+    <input name="uname" type="text" required id="uid" placeholder="Enter Username">
+
+    <label for="psw"><b>Password</b></label>
+    <input name="psw" type="password" required id="pid" placeholder="Enter Password">
+
+    <label for="dname"><b>Database</b></label>
+    <input name="dname" type="text" required id="dname" placeholder="Enter Database name">
+
+    <button type="button" onClick="retrieveTables()">GO&nbsp;</button>
+
+  </div>
+<hr>
+
+	<!-- TABLES POPULATE SECTION -->
+
+<h1 align ="center">Database Tables</h1>
+	<div class="container2">
+		<div id="total_tables">
+		</div>
+		<button class="inibut" id="get_skeleton" type="button" onClick="getSkeletons()">Get Skeletons</button>
+		<button class="inibut" id="reset_skeleton" type="button" onClick="resetSkeletons()">Reset Skeletons</button>
+	</div>
+<hr>
+
+	<!-- SKELETONS -->
+
+		<div class="container3">
+			<h1 align ="center">QBE Interface</h1>
+			<div id="skeletons">
+			</div>
+			<form  class="conbut" style="border:none">
+			<label for="condition_box"><b>Condition Box</b></label>
+	    <input name="condition_box" type="text" id="condition_box" placeholder="Enter Condition Here!">
+			<button id="get_results" type="button" onClick="getResults()">Run Query</button>
+		</form>
+		</div>
+<hr>
+
+<!-- QUERY RESULTS -->
+
+	<div class="container4">
+		<h1 align ="center">Query Results</h1>
+		<div id="query_space"></div>
+		<div id="results">
+		</div>
+	</div>
+<hr>
+</body>
+</html>
